@@ -8,4 +8,18 @@ window.Blog =
   Models: {}
   Collections: {}
   Routers: {}
-  Views: {}
+  Views: {
+    Home: {}
+  }
+  currentView: null
+
+  init: ->
+    if @currentView?
+      @currentView.undelegateEvents()
+      @currentView = null
+
+    viewName = $("body").data("view")
+    @currentView = new Blog.Views[viewName]() if Blog.Views[viewName]?
+
+$ ->
+  Blog.init()

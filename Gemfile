@@ -4,9 +4,11 @@ gem 'rails', '3.2.12'
 gem 'pg'
 
 gem 'authlogic'
+gem 'acts-as-taggable-on', '~> 2.3.1'
 gem 'carrierwave'
 gem 'draper'
-gem 'formtastic'
+gem "decent_exposure", "~> 2.1.0"
+gem 'simple_form'
 gem 'fog'
 gem 'haml'
 gem 'json'
@@ -16,6 +18,7 @@ gem 'kaminari'
 gem 'mini_magick'
 gem 'rails-backbone'
 gem 'squeel'
+gem "stringex", "~> 1.5.1"
 gem 'less-rails-bootstrap'
 gem 'yui-compressor', '~> 0.9.6'
 

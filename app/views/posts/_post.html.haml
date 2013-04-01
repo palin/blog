@@ -1,0 +1,14 @@
+.post
+  %header
+    %h3= link_to post.title, post_path(post)
+    %p.meta
+      = image_tag "date.png", :alt => "Date"
+      %time{:datetime => post.created_at}
+        = post.created_at.strftime("%A, %e %B %Y")
+      &#8226;
+      = link_to "#{post.comments.count} Comments", "#comments", :class => "comments"
+  %section.content
+    = raw post.content_or_abstract(params[:action])
+  %section.tags
+    %span= post.tag_list
+    = image_tag "tags.png", :alt => "Tags"

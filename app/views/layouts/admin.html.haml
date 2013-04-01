@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title admin | palinium.com
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body{:class => "admin #{controller_name} #{action_name}", :'data-view' => "Admin#{controller_name.humanize}#{action_name.humanize}"}
+    = render 'admin/layouts/top_bar'
+    #container
+      %header
+        = render 'admin/layouts/header'
+      %section
+        %nav
+        %section.content
+          %h2= controller_name
+          = yield

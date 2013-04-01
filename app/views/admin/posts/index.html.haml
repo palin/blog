@@ -1,0 +1,32 @@
+= link_to "New", new_admin_post_path
+
+%table.table.table-hover.table-striped.table-bordered
+  %thead
+    %tr
+      %th ID
+      %th Title
+      %th Category
+      %th Hidden
+      %th Published
+      %th Comments
+      %th Actions
+  %tbody
+    - posts.each do |p|
+      %tr
+        %td= p.id
+        %td= p.title
+        %td= p.category
+        %td= p.hidden
+        %td= p.published
+        %td= p.comments.size
+        %td
+          %ul.button-group
+            - if p.published? && !p.hidden?
+              %li= link_to "Hide!", hide_admin_post_path(p), :method => :post, :class => "button primary pill"
+            - elsif p.hidden?
+              %li= link_to "Show!", visible_admin_post_path(p), :method => :post, :class => "button primary pill"
+            - else
+              %li= link_to "Publish!", publish_admin_post_path(p), :method => :post, :class => "button primary pill"
+            %li= link_to "Edit", edit_admin_post_path(p), :class => "button pill"
+            %li= link_to "Preview", admin_post_path(p), :class => "button pill"
+            %li= link_to "Delete", admin_post_path(p), :method => :delete, :class => "button danger pill", :confirm => "Are you sure?"

@@ -1,22 +1,23 @@
 html {
   height: 100%;
 
-  body {
+  body.blog {
     margin: 0;
     height: 100%;
     font-family: 'Lato', sans-serif;
-    background: #ccc;
+    background: rgb(17, 67, 114);
 
     #container {
       margin: 0 auto;
       width: 900px;
-      -webkit-box-shadow: 32px -30px 25px -25px #888888, -32px -30px 25px -25px #888888;
-      box-shadow: 32px -30px 25px -25px #888888, -32px -30px 25px -25px #888888;
+      -webkit-box-shadow: 32px -30px 15px -25px #000000, -32px -30px 15px -25px #000000;
+      box-shadow: 32px -30px 15px -25px #000000, -32px -30px 15px -25px #000000;
 
-      h1, h2, h3, h4 {
+      h1, h2, h3, h4, h5 {
         padding: 0;
         margin: 0;
         font-weight: 300;
+        margin: 10px 0;
       }
       h1 {
         font-size: 76px;
@@ -25,10 +26,15 @@ html {
         font-size: 47px;
       }
       h3 {
+        font-weight: 400;
         font-size: 29px;
       }
       h4 {
         font-size: 18px;
+      }
+      h5 {
+        font-style: italic;
+        font-size: 14px;
       }
       p:first-child {
         text-indent: 47px;
@@ -49,11 +55,14 @@ html {
         width: 840px;
       }
       header, footer {
-        background: #eee;
+        background: #fff;
         padding: 0 30px;
       }
       header {
         height: 100px;
+        h1, h2, h3, h4, h5 {
+          margin: 0;
+        }
       }
       section {
         min-height: 100%;

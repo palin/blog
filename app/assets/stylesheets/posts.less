@@ -1,0 +1,97 @@
+.opacity (@value) {
+  -moz-opacity: @value/100;
+  -khtml-opacity: @value/100;
+  opacity: @value/100;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{value})";
+}
+
+@dashed_border: 5px dashed #eee;
+html {
+  body {
+    #posts {
+      .post {
+        header {
+          height: 80px;
+          padding: 0;
+          margin: 0;
+          background: #fff;
+
+          a, a:hover, a:visited {
+            color: #2455c3;
+          }
+
+          p.meta {
+            font-size: 14px;
+            font-style: italic;
+            img {
+              margin-bottom: 6px;
+              margin-right: 4px;
+            }
+            a.comments {
+              color: #2455c3;
+            }
+          }
+        }
+        section.content {
+          padding: 0;
+          background: #fff;
+
+          #code_block {
+            background: #ddd;
+            border: 1px solid #ddd;
+            border-bottom: @dashed_border;
+            overflow: auto;
+            margin-bottom: 15px;
+
+            pre {
+              padding: 20px;
+              margin: 0;
+              background: #eee;
+              border-bottom: 5px dashed #ddd;
+              code {
+                background: #eee;
+                font: 12px Monaco, "Source Code Pro", Courier, Monospace;
+                color: #0E304A;
+              }
+            }
+            #copy_strip {
+              padding-top: 5px;
+              text-align: center;
+              border-left: @dashed_border;
+              border-right: @dashed_border;
+              img {
+                height: 20px;
+                .opacity (20);
+              }
+              #copy {
+                margin-top: -5px;
+                font-size: 12px;
+                color: #999;
+              }
+            }
+            #copy_strip:hover {
+              background: #ccc;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+      section.tags {
+        border-bottom: 1px solid #eee;
+        padding: 0;
+        margin: 0 0 20px 0;
+        width: 840px;
+        text-align: right;
+
+        img {
+          margin: 2px 0;
+        }
+        span {
+          color: #ccc;
+          font-size: 13px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
