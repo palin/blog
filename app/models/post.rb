@@ -1,14 +1,14 @@
 class Post < ActiveRecord::Base
-  attr_accessible :content, :title, :category_id, :slug, :hidden
+  attr_accessible :content, :title, :category_id, :slug, :hidden, :tag_list
   acts_as_url :title, :sync_url => true, :url_attribute => :slug
+  acts_as_taggable_on :tags
 
   validates :content, :title, presence: true
 
   has_many :comments
-  belongs_to :tags
   belongs_to :category
 
-  default_scope order("created_at DESC")
+  default_scope order("published DESC")
 
   scope :visible, where(:hidden => false)
   scope :published, where("posts.published IS NOT NULL")

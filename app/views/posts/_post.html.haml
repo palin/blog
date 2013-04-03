@@ -10,5 +10,5 @@
   %section.content
     = raw post.content_or_abstract(params[:action])
   %section.tags
-    %span= post.tag_list
+    %span= post.tag_collection
     = image_tag "tags.png", :alt => "Tags"

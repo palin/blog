@@ -1,19 +1,16 @@
 class UserSessionsController < ApplicationController
-  def new
-    @user_session = UserSession.new
-  end
+  expose(:user_session) { UserSession.new(params[:user_session]) || UserSession.new }
 
   def create
-    @user_session = UserSession.new(params[:user_session])
-    if @user_session.save
+    if user_session.save
       redirect_to admin_posts_url
     else
-      render :action => :new
+      render :new
     end
   end
 
   def destroy
-    current_user_session.destroy
+    current_user_session.destroy if current_user_session.present?
     redirect_to root_url
   end
 end

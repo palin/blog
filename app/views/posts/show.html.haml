@@ -1,2 +1,5 @@
 #posts
   = render :partial => "post", :locals => { :post => post }
+  = render :partial => "comments/new_comment"
+  - post.comments.each do |c|
+    = render :partial => "comments/comment", :locals => {}

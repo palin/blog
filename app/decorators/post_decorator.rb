@@ -17,8 +17,7 @@ class PostDecorator < Draper::Decorator
     action == "show" ? content : abstract
   end
 
-  def tag_list
-    # self.tags.join(", ") if self.tags.present?
-    "vodka, troll, mysql, database, rails, ror, gin"
+  def tag_collection
+    self.tag_list.join(", ") if self.tag_list.present?
   end
 end

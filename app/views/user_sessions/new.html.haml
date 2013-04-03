@@ -1,11 +1,11 @@
-= simple_form_for @user_session do |f|
-  - if @user_session.errors.any?
+= simple_form_for user_session do |f|
+  - if user_session.errors.any?
     #error_explanation
       %h4
-        = pluralize(@user_session.errors.count, "error")
+        = pluralize(user_session.errors.count, "error")
         prohibited:
       %ul
-        - @user_session.errors.full_messages.each do |msg|
+        - user_session.errors.full_messages.each do |msg|
           %li= msg
   = f.input :login, :label => false, :required => true, :placeholder => "Login"
   = f.input :password, :label => false, :required => true, :placeholder => "Hasło"
