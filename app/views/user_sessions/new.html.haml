@@ -1,12 +1,9 @@
 = simple_form_for user_session do |f|
   - if user_session.errors.any?
     #error_explanation
-      %h4
-        = pluralize(user_session.errors.count, "error")
-        prohibited:
       %ul
         - user_session.errors.full_messages.each do |msg|
           %li= msg
   = f.input :login, :label => false, :required => true, :placeholder => "Login"
-  = f.input :password, :label => false, :required => true, :placeholder => "Hasło"
-  = f.button :submit, :value => "Zaloguj", :class => "btn btn-large btn-primary"
+  = f.input :password, :label => false, :required => true, :placeholder => "Password"
+  = f.button :submit, :value => "Log in", :class => "btn btn-large btn-primary"
