@@ -7,6 +7,8 @@
     = csrf_meta_tags
   %body{:class => "blog #{controller_name} #{action_name}", :'data-view' => "#{controller_name.humanize}"}
     #container
+      - unless Rails.env.production?
+        #env_box= Rails.env
       %header
         = render :partial => "layouts/header"
       %section
