@@ -64,4 +64,7 @@ Blog::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+  config.middleware.insert_after("::Rack::Lock", "::Rack::Auth::Basic", "Enter password to access production") do |user, password|
+    [user, password] == [ENV['STAGING_AUTH_USERNAME'], ENV['STAGING_AUTH_PASSWORD']]
+  end
 end

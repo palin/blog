@@ -34,4 +34,8 @@ Blog::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.middleware.insert_after("::Rack::Lock", "::Rack::Auth::Basic", "Enter password to access staging") do |user, password|
+    [user, password] == [ENV['STAGING_AUTH_USERNAME'], ENV['STAGING_AUTH_PASSWORD']]
+  end
 end
