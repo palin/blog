@@ -5,6 +5,20 @@ development:
   pool: 5
   timeout: 5000
 
+staging:
+  adapter: mysql2
+  database: blog_dev
+  username: root
+  pool: 5
+  timeout: 5000
+
+smoke:
+  adapter: mysql2
+  database: blog_dev
+  username: root
+  pool: 5
+  timeout: 5000
+
 test:
   adapter: mysql2
   database: blog_test
