@@ -1,8 +1,8 @@
 %h2 New post
 = simple_form_for [:admin, post] do |p|
-  = p.input :title, :label => false, :required => true, :placeholder => "Title"
-  = p.input :category_id, :label => false, :required => true, :placeholder => "Category", :collection => Category.pluck(:name), include_blank: false
-  = p.input :tag_list, :label => false, :required => true, :placeholder => "Tags"
-  = p.input :content, :label => false, :required => true, :placeholder => "Content"
+  = p.input :title, label: false, required: true, placeholder: "Title"
+  = p.input :category_id, label: false, required: true, placeholder: "Category", collection: Category.pluck(:name), include_blank: false
+  = p.input :tag_list, label: false, required: true, placeholder: "Tags"
+  = p.input :content, label: false, required: true, placeholder: "Content"
   = p.input :hidden
   = p.button :submit

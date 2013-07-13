@@ -9,7 +9,7 @@ class PostDecorator < Draper::Decorator
     truncate(content,
       :length => 0,
       :separator => separator,
-      :omission => link_to("...read more", post_path(self))
+      :omission => button_tag("READ MORE", class: 'omission btn btn-block btn-info', :href => post_path(self))
     )
   end
 

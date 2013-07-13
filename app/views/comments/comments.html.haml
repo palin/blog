@@ -1,0 +1,12 @@
+.comments#comments
+  %a{ href: "#go_to_comments" }
+    %h2
+      Comments
+  %a{ href: "#add_new_comment" }
+    %h5
+      Add new comment
+  %section#go_to_comments
+    - @comments.each do |c|
+      = render partial: "comments/comment", locals: { comment: c }
+  .new#add_new_comment
+    = render partial: "comments/new_comment"

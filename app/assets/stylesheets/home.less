@@ -20,9 +20,7 @@ html {
     }
     #container {
       margin: 0 auto;
-      width: 900px;
-      -webkit-box-shadow: 32px -30px 15px -25px #000000, -32px -30px 15px -25px #000000;
-      box-shadow: 32px -30px 15px -25px #000000, -32px -30px 15px -25px #000000;
+      width: 890px;
 
       h1, h2, h3, h4, h5 {
         padding: 0;
@@ -62,26 +60,52 @@ html {
         text-align: justify;
         margin-bottom: 26px;
       }
-      header, section, footer {
-        width: 840px;
-      }
       header, footer {
-        background: #fff;
         padding: 0 30px;
       }
       header {
-        height: 100px;
+        height: 38px;
         h1, h2, h3, h4, h5 {
           margin: 0;
         }
+        h2 {
+          text-align: right;
+          margin-right: 25px;
+          a {
+            text-decoration: none;
+          }
+          a:hover {
+            text-decoration: none;
+          }
+        }
       }
       section {
+        -webkit-box-shadow: 0px 0px 24px -4px #000000;
+        box-shadow: 0px 0px 24px -4px #000000;
         min-height: 100%;
         background: #fff;
-        padding: 20px 30px;
+        overflow: hidden;
+        padding-top: 0px;
+        .left_column {
+          border-top: 20px solid rgb(21, 89, 153);
+          width: 850px;
+          padding: 20px 20px 30px 20px;
+          float: left;
+
+          img#palin {
+            margin-top: -20px;
+            margin-right: -20px;
+            width: 100px;
+            height: 100px;
+            float: right;
+            transform: rotate(180deg);
+           -moz-transform: rotate(180deg);
+           -webkit-transform: rotate(180deg);
+          }
+        }
       }
       footer {
-        height: 300px;
+        height: 100px;
       }
     }
   }

@@ -4,6 +4,6 @@
       %ul
         - user_session.errors.full_messages.each do |msg|
           %li= msg
-  = f.input :login, :label => false, :required => true, :placeholder => "Login"
-  = f.input :password, :label => false, :required => true, :placeholder => "Password"
-  = f.button :submit, :value => "Log in", :class => "btn btn-large btn-primary"
+  = f.input :login, label: false, required: true, placeholder: "Login"
+  = f.input :password, label: false, required: true, placeholder: "Password"
+  = f.button :submit, value: "Log in", class: "btn btn-large btn-primary"
