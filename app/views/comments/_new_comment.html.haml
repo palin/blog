@@ -1,8 +1,14 @@
 %h3
   New comment
 = simple_form_for comment do |f|
-  = f.input :author, placeholder: "Author", label: false, required: true, class: "span3"
-  = f.input :content, placeholder: "Content", label: false, required: true
+  .author_input
+    = f.input :author, placeholder: "Author", label: false, required: true, input_html: { class: "span3 author_input" }, maxlength: 30
+    .letters_counter
+      %span 30
+  .content_input
+    = f.input :content, placeholder: "Content", label: false, required: true, input_html: { class: "content_input" }, maxlength: 500
+    .letters_counter
+      %span 500
   = f.input :captcha, placeholder: "two plus seven equals (word)", label: false, required: true
   = f.association :post, as: :string, as: :hidden, input_html: { value: params[:id] }
   = f.button :submit, :value => "Comment!", class: 'btn-primary'
