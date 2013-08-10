@@ -1,7 +1,12 @@
 .comment
-  %p.meta
-    %span.author= comment.author
-    &#8226;
-    %time{ datetime: comment.created_at }
-      = comment.created_at.strftime("%H:%M on %A, %e %B %Y")
-  %p.content= comment.content
+  .avatar
+    = image_tag "default_cat.png", alt: "user without avatar", width: 60, height: 60
+  .middle
+    %p.meta
+      %span.author= comment.author
+      &#8226;
+      %time{ datetime: comment.created_at }
+        = comment.created_at.strftime("%H:%M on %A, %e %B %Y")
+    %p.content= comment.content
+  .number
+    %span= index
