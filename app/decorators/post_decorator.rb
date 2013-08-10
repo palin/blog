@@ -7,7 +7,7 @@ class PostDecorator < Draper::Decorator
   def abstract
     separator = "<!--MORE-->"
     truncate(content,
-      :length => 0,
+      :length => 9,
       :separator => separator,
       :omission => link_to(button_tag("READ MORE", class: 'omission btn btn-block btn-info'), post_path(self), class: 'omission')
     )
