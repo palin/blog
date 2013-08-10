@@ -1,7 +1,7 @@
 html {
   height: 100%;
 
-  body.blog {
+  body.blog, body.about {
     margin: 0;
     height: 100%;
     font-family: 'Lato', sans-serif;
@@ -45,11 +45,13 @@ html {
         font-style: italic;
         font-size: 14px;
       }
-      p:first-child {
-        text-indent: 47px;
-      }
-      p:first-child:first-letter {
-        font-weight: 700;
+      article {
+        p:first-child {
+          text-indent: 47px;
+        }
+        p:first-child:first-letter {
+          font-weight: 700;
+        }
       }
       p {
         padding: 0;
@@ -79,7 +81,7 @@ html {
           }
         }
       }
-      section {
+      section.layout {
         -webkit-box-shadow: 0px 0px 24px -4px #000000;
         box-shadow: 0px 0px 24px -4px #000000;
         min-height: 100%;

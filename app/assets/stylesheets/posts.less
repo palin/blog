@@ -9,10 +9,23 @@
 html {
   body {
     #posts {
+      p.meta {
+        text-indent: 0px;
+        font-size: 14px;
+        font-style: italic;
+        margin-bottom: 10px;
+        img {
+          margin-bottom: 6px;
+          margin-right: 4px;
+        }
+        a.comments {
+          color: #2455c3;
+        }
+      }
       .post {
         margin-bottom: 40px;
         header {
-          height: 80px;
+          height: auto;
           padding: 0;
           margin: 0;
           background: #fff;
@@ -20,22 +33,13 @@ html {
           a, a:hover, a:visited {
             color: #2455c3;
           }
-
-          p.meta {
-            font-size: 14px;
-            font-style: italic;
-            img {
-              margin-bottom: 6px;
-              margin-right: 4px;
-            }
-            a.comments {
-              color: #2455c3;
-            }
-          }
         }
         article {
           padding: 0;
           background: #fff;
+          a.omission {
+            text-decoration: none;
+          }
           button.omission {
             margin: -10px 0 20px 0;
             width: 115px;

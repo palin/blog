@@ -7,8 +7,6 @@ class PostsController < ApplicationController
   expose(:decorated_posts) { PostDecorator.decorate_collection(posts_paginated) }
   expose(:post) { Post.find_by_slug(params[:id]).decorate }
   expose(:comment) { Comment.new }
+  expose(:comments) { post.comments }
 
-  def show
-    @comments = post.comments
-  end
 end

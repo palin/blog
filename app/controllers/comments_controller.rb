@@ -4,11 +4,13 @@ class CommentsController < ApplicationController
 
   def create
     comment = post.comments.build(params[:comment])
+    post_id = params[:comment][:post_id]
     if comment.save
-      redirect_to post_path(:id => params[:comment][:post_id])
+      redirect_to post_path(id: post_id), notice: "Thank you!"
     else
-      render 'posts/show'
+      redirect_to post_path(id: post_id), alert: "There was a problem. Try again!"
     end
+
   end
 
   def update

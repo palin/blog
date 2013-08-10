@@ -1,4 +1,9 @@
 .comment
-  .title= comment.title
-  .author= comment.author
-  .content= comment.content
+  %p.meta
+    = comment.author
+    &#8226;
+    = comment.title
+    &#8226;
+    %time{ datetime: comment.created_at }
+      = comment.created_at.strftime("%A, %e %B %Y")
+  %p.content= comment.content

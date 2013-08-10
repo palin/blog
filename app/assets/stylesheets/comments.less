@@ -1,12 +1,54 @@
 .comments {
-  .comment {
-    margin-bottom: 20px;
+  section#comments_section {
+    clear: both;
+    padding-top: 0px;
+    .comment {
+      margin-bottom: 20px;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      background: rgba(204, 204, 204, 0.15);
+      padding: 10px;
+      .title {
+        height: 30px;
+      }
+      .author {
+        font-weight: bold;
+        height: 30px;
+      }
+      p.content {
+        margin-bottom: 0px;
+      }
+    }
+  }
+  h3.with_link {
+    float: left;
+  }
+  #new_comment_link {
+    float:left;
+    button {
+      padding: 3px 15px;
+      margin-top: 13px;
+      margin-left: 15px;
+    }
   }
   .new {
     form#new_comment {
       textarea {
-        width: 384px;
+        width: 396px;
         height: 100px;
+      }
+      .comment_author, .comment_title, .comment_captcha, input[type=submit] {
+        float: left;
+      }
+      .comment_title, input[type=submit] {
+        margin-left: 10px;
+      }
+      .comment_content {
+        clear: both;
+      }
+      input[type=submit] {
+        width: 205px;
       }
     }
   }

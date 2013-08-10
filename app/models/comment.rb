@@ -4,5 +4,7 @@ class Comment < ActiveRecord::Base
 
   validates :content, :author, :captcha, presence: true
 
+  default_scope order("created_at DESC")
+
   belongs_to :post
 end

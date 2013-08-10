@@ -17,6 +17,7 @@ Blog::Application.routes.draw do
 
   match 'logout', to: 'user_sessions#destroy'
   match 'login', to: 'user_sessions#new', as: "login"
+  match 'about', to: 'static_pages#about'
   resources :user_sessions, only: [:create]
   resources :posts
   resources :tags

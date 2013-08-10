@@ -7,9 +7,9 @@
         = post.created_at.strftime("%A, %e %B %Y")
       &#8226;
       = link_to "#{post.comments.count} Comments", "#{post_path(post)}#comments", class: "comments"
+      &#8226;
+      = post.tag_collection
+      = image_tag "tags.png", alt: "Tags"
   %article
     = raw post.content_or_abstract(params[:action])
-  .tags.tagsinput
-    - post.tags.pluck(:name).each do |tag|
-      %span.tag= tag
-    = image_tag "tags.png", alt: "Tags"
+
