@@ -36,6 +36,7 @@ group :development do
   gem 'psych'
   gem 'mysql2'
   gem "rails-dev-boost"
+  gem 'thin'
 end
 
 group :test do

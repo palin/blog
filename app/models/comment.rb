@@ -1,5 +1,5 @@
 class Comment < ActiveRecord::Base
-  attr_accessible :content, :title, :author, :captcha, :post_id
+  attr_accessible :content, :author, :captcha, :post_id
   attr_accessor :captcha
 
   validates :content, :author, :captcha, presence: true

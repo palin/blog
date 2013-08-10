@@ -10,8 +10,8 @@ class Post < ActiveRecord::Base
 
   default_scope order("published DESC")
 
-  scope :visible, where(hidden: false)
-  scope :published, where("posts.published IS NOT NULL")
+  scope :visible, -> { where(hidden: false) }
+  scope :published, -> { where("published IS NOT NULL") }
 
   def to_param
     slug

@@ -9,11 +9,10 @@
       border-radius: 6px;
       background: rgba(204, 204, 204, 0.15);
       padding: 10px;
-      .title {
-        height: 30px;
-      }
       .author {
         font-weight: bold;
+        font-size: 18px;
+        font-style: normal;
         height: 30px;
       }
       p.content {
@@ -26,6 +25,7 @@
   }
   #new_comment_link {
     float:left;
+    margin-top: 2px;
     button {
       padding: 3px 15px;
       margin-top: 13px;
@@ -38,10 +38,10 @@
         width: 396px;
         height: 100px;
       }
-      .comment_author, .comment_title, .comment_captcha, input[type=submit] {
+      .comment_author, .comment_captcha, input[type=submit] {
         float: left;
       }
-      .comment_title, input[type=submit] {
+      input[type=submit] {
         margin-left: 10px;
       }
       .comment_content {

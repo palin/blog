@@ -1,9 +1,7 @@
 .comment
   %p.meta
-    = comment.author
-    &#8226;
-    = comment.title
+    %span.author= comment.author
     &#8226;
     %time{ datetime: comment.created_at }
-      = comment.created_at.strftime("%A, %e %B %Y")
+      = comment.created_at.strftime("%H:%M on %A, %e %B %Y")
   %p.content= comment.content
