@@ -164,8 +164,6 @@ GEM
     nokogiri (1.5.6)
     open4 (1.3.0)
     pg (0.14.1)
-    polyamorous (0.5.0)
-      activerecord (~> 3.0)
     polyglot (0.3.3)
     pry (0.9.12)
       coderay (~> 1.0.5)
@@ -257,10 +255,6 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    squeel (1.0.18)
-      activerecord (~> 3.0)
-      activesupport (~> 3.0)
-      polyamorous (~> 0.5.0)
     steak (2.0.0)
       capybara (>= 1.0.0)
       rspec-rails (>= 2.5.0)
@@ -331,7 +325,6 @@ DEPENDENCIES
   shoulda
   simple_form
   spork
-  squeel
   steak
   stringex (~> 1.5.1)
   therubyracer

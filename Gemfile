@@ -17,7 +17,6 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'mini_magick'
 gem 'rails-backbone'
-gem 'squeel'
 gem "stringex", "~> 1.5.1"
 gem 'less-rails-bootstrap'
 gem 'yui-compressor', '~> 0.9.6'
