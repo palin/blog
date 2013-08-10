@@ -22,6 +22,7 @@ gem 'rails-backbone'
 gem "stringex", "~> 1.5.1"
 gem 'less-rails-bootstrap'
 gem 'yui-compressor', '~> 0.9.6'
+gem 'thin'
 
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'
@@ -37,7 +38,6 @@ group :development do
   gem 'psych'
   gem 'mysql2'
   gem "rails-dev-boost"
-  gem 'thin'
 end
 
 group :test do
