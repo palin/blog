@@ -7,6 +7,9 @@
       &#8226;
       %time{ datetime: comment.created_at }
         = comment.created_at.strftime("%H:%M on %A, %e %B %Y")
+      &#8226;
+      - if current_user
+        = link_to "Delete", comment_path(comment, post_id: comment.post_id), method: :delete, confirm: "Delete this comment?"
     %p.content= comment.content
   .number
     %span= index

@@ -66,24 +66,23 @@
   }
   .new {
     form#new_comment {
-      textarea {
-        width: 396px;
-        height: 100px;
-      }
-      .comment_author, .comment_captcha, input[type=submit] {
+      .author_input_wrapper {
         float: left;
-      }
-      .author_input {
+        input {
+          float: left;
+        }
         .letters_counter {
           float: left;
           margin: 12px;
         }
       }
-      input[type=submit] {
-        margin-left: 10px;
-      }
-      .content_input {
+      .content_input_wrapper {
         clear: both;
+        textarea {
+          float: left;
+          width: 396px;
+          height: 100px;
+        }
         .letters_counter {
           float: left;
           margin-top: 45px;
@@ -92,12 +91,8 @@
       }
       input[type=submit] {
         width: 205px;
-      }
-      .comment_content {
-        float: left;
-      }
-      .comment_captcha {
         clear: both;
+        float: left;
       }
       .zero_left {
         color: #E74C3C;

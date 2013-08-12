@@ -23,3 +23,4 @@ window.Blog =
 
 $ ->
   Blog.init()
+  # $("#flash").addClass("fadeOutUp")

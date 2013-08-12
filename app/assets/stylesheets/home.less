@@ -1,6 +1,31 @@
 html {
   height: 100%;
-
+  #flash {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 40px;
+    text-align: center;
+    span {
+      margin-right: 10px;
+    }
+    .alert, .notice {
+      color: #fff;
+      text-shadow: none;
+      border: none;
+      border-radius: 0px;
+      padding-left: 20px;
+      height: 20px;
+    }
+    .alert {
+      background-color: #E74C3C;
+    }
+    .notice {
+      background-color: #2ECC71;
+      padding: 10px 20px;
+    }
+  }
   body.blog, body.about {
     margin: 0;
     height: 100%;

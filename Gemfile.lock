@@ -158,6 +158,9 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.6.1)
     mysql2 (0.3.11)
+    negative_captcha (0.3.3)
+      actionpack
+      activesupport
     net-scp (1.1.0)
       net-ssh (>= 2.6.5)
     net-ssh (2.6.6)
@@ -314,6 +317,7 @@ DEPENDENCIES
   mail_safe
   mini_magick
   mysql2
+  negative_captcha
   pg
   pry
   pry-debugger

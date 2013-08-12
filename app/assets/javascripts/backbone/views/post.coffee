@@ -2,8 +2,8 @@ class Blog.Views.Post extends Backbone.View
 
   el: '#posts'
   events:
-    'keyup #comment_author': 'countLetters'
-    'keyup #comment_content': 'countLetters'
+    'keyup .content_input': 'countLetters'
+    'keyup .author_input': 'countLetters'
 
   countLetters: (e)->
     input = $(e.currentTarget)
@@ -11,10 +11,10 @@ class Blog.Views.Post extends Backbone.View
     max = parseInt(input.attr('maxlength'), 10)
     now = input.val().length
     left = max - now
-    span = @$el.find(".#{span_counter} .letters_counter span")
+    span = @$el.find(".#{span_counter}_wrapper .letters_counter span")
     if span?
       span.text(left)
       if left == 0
-        span.addClass("zero_left")
+        span.toggleClass("zero_left")
       else
         span.removeClass("zero_left")

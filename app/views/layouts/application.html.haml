@@ -6,6 +6,16 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body{class: "blog #{controller_name}", data: { view: backbone_view }}
+    - if flash[:alert] || flash[:notice]
+      #flash
+        - if flash[:alert]
+          .alert
+            %span.fui-cross
+            = flash[:alert]
+        - elsif flash[:notice]
+          .notice
+            %span.fui-check
+            = flash[:notice]
     #container{class: "#{action_name}"}
       - unless Rails.env.production?
         #env_box= Rails.env
