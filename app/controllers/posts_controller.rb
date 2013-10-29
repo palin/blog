@@ -8,8 +8,12 @@ class PostsController < ApplicationController
   expose(:raw_post) { Post.find_by_slug(params[:id])}
   expose(:post) { raw_post.decorate }
   expose(:comment) { Comment.new }
-  expose(:comments) { post.comments }
+  expose(:comments) { CommentDecorator.decorate_collection(post.comments) }
   expose(:captcha) { setup_negative_captcha }
+
+  def show
+    gon.post_id = params[:id]
+  end
 
   private
 
@@ -21,5 +25,4 @@ class PostsController < ApplicationController
       params: params
     )
   end
-
 end

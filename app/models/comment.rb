@@ -1,5 +1,5 @@
 class Comment < ActiveRecord::Base
-  attr_accessible :content, :author, :post_id
+  attr_accessible :content, :author, :post_id, :avatar
 
   validates :content, :author, presence: true
 

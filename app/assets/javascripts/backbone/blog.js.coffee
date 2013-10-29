@@ -20,7 +20,10 @@ window.Blog =
 
     viewName = $("body").data("view")
     @currentView = new Blog.Views[viewName]() if Blog.Views[viewName]?
+    @currentView.render() if @currentView
+
+  apiRoot: (version=1)->
+    window.location.protocol + "//" + window.location.host + "/api/v#{version}"
 
 $ ->
   Blog.init()
-  # $("#flash").addClass("fadeOutUp")

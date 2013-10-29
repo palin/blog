@@ -23,4 +23,10 @@ Blog::Application.routes.draw do
   resources :tags
   resources :categories
   resources :comments
+
+  namespace :api do
+    namespace :v1 do
+      resources :comments
+    end
+  end
 end
