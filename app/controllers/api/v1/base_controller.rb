@@ -1,5 +1,6 @@
 class Api::V1::BaseController < ActionController::Metal
 
+  require 'jbuilder'
   include ActionController::Helpers
   include ActionController::Redirecting
   include ActionController::Rendering
@@ -11,6 +12,7 @@ class Api::V1::BaseController < ActionController::Metal
   include AbstractController::Callbacks # need this to build params
   include ActionController::Instrumentation # need this for wrap_parameters
   include ActionController::ParamsWrapper
+
   include Rails.application.routes.url_helpers # tell the controller where to look for templates
 
   append_view_path "#{Rails.root}/app/views/api/v1" # you need this to wrap the parameters correctly eg # { "person": { "name": "Zack", "email": "sakchai@artellectual.com", "twitter": "@artellectual" }}

@@ -7,6 +7,7 @@ gem 'pg'
 
 gem 'authlogic'
 gem 'acts-as-taggable-on', '~> 2.3.1'
+gem 'active_model_serializers'
 gem 'carrierwave'
 gem 'draper'
 gem 'decent_exposure', '~> 2.1.0'

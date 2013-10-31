@@ -9,4 +9,10 @@ class Comment < ActiveRecord::Base
   default_scope order("created_at DESC")
 
   belongs_to :post
+
+  def avatar
+    width = [*60..70].sample
+    height = [*60..70].sample
+    ["http://placedog.com/#{width}/#{height}", "http://placekitten.com/#{width}/#{height}"].sample
+  end
 end

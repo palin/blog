@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   expose(:raw_post) { Post.find_by_slug(params[:id])}
   expose(:post) { raw_post.decorate }
   expose(:comment) { Comment.new }
-  expose(:comments) { CommentDecorator.decorate_collection(post.comments) }
+  expose(:comments) { post.comments }
   expose(:captcha) { setup_negative_captcha }
 
   def show
