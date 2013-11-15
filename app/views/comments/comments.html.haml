@@ -1,10 +1,14 @@
+<hr>
 .comments#comments
-  - if comments.present?
-    %h3.with_link Comments
-    %a#new_comment_link{ href: "#add_new_comment" }
-      %button.btn.btn-primary add new
-    %section#comments_section
+  %h3.with_link Comments
+  %a#new_comment_link{ href: "#add_new_comment" }
+    %button.btn.btn-primary add new
+  %section#comments_section
+    - if comments.present?
       - comments.each_with_index do |c, i|
         = render partial: "comments/comment", locals: { comment: c, index: i + 1 }
+    - else
+      .no_comments
+        %p There are no comments yet
   .new#add_new_comment
     = render partial: "comments/new_comment"

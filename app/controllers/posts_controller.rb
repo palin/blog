@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   expose(:posts) { Post.visible.published }
   expose(:pgn) { Pagination.new(posts, 3, params) }
-  expose(:posts_paginated) { posts.page(params[:page] || 1).per(params[:per_page] || 3) }
+  expose(:posts_paginated) { posts.page(params[:page] || 1).per(params[:per_page] || 10) }
   expose(:decorated_posts) { PostDecorator.decorate_collection(posts_paginated) }
   expose(:raw_post) { Post.find_by_slug(params[:id])}
   expose(:post) { raw_post.decorate }

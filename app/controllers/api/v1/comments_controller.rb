@@ -1,4 +1,4 @@
-class Api::V1::CommentsController < Api::V1::BaseController
+class Api::V1::CommentsController < ActionController::Base
   respond_to :json
 
   before_filter :setup_negative_captcha, only: [:create, :update]

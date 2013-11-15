@@ -41,6 +41,7 @@ class Blog.Views.Post extends Backbone.View
   handleSuccess: (response)=>
     @$("#new_comment_link").fadeOut('fast')
     @$("#add_new_comment").fadeOut('slow')
+    @$(".no_comments").fadeOut('slow')
     comment_view = new Blog.Views.Comment(model: @model)
     @$("#comments_section").prepend(comment_view.$el)
     window.location = window.location.origin + window.location.pathname + "#comments"

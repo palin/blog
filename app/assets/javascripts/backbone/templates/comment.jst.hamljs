@@ -5,7 +5,7 @@
     %p.meta
       %span.author= data.author
       &#8226;
-      %time{ datetime: data.created_at }
+      %time{ datetime: data.neat_created_at }
         = data.neat_created_at
       &#8226;
     %p.content= data.content

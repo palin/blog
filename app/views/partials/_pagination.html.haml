@@ -1,6 +1,7 @@
-.pagination
-  %ul
-    %li.previous= link_to "", { page: pgn.previous_page }, { class: "fui-arrow-left"}
-    - pgn.pages.each do |p|
-      %li{class: (pgn.this_page == p ? 'active' : '')}= link_to p, { page: p }
-    %li.next= link_to "", { page: pgn.next_page }, { class: "fui-arrow-right"}
+- if pgn.total_pages > 1
+  .pagination
+    %ul
+      %li.previous= link_to "", { page: pgn.previous_page }, { class: "fui-arrow-left"}
+      - pgn.pages.each do |p|
+        %li{class: (pgn.this_page == p ? 'active' : '')}= link_to p, { page: p }
+      %li.next= link_to "", { page: pgn.next_page }, { class: "fui-arrow-right"}

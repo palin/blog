@@ -15,4 +15,8 @@ class Comment < ActiveRecord::Base
     height = [*60..70].sample
     ["http://placedog.com/#{width}/#{height}", "http://placekitten.com/#{width}/#{height}"].sample
   end
+
+  def neat_created_at
+    created_at.strftime("%H:%M on %A, %e %B %Y")
+  end
 end
