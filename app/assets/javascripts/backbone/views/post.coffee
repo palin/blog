@@ -36,9 +36,21 @@ class Blog.Views.Post extends Backbone.View
     e.preventDefault()
     if @model.isValid(true)
       @model.save(@$('#new_comment').serialize(), @handleSuccess, @handleErrors)
+    else false
 
-  handleSuccess: (response)->
-    true
+  handleSuccess: (response)=>
+    @$("#new_comment_link").fadeOut('fast')
+    @$("#add_new_comment").fadeOut('slow')
+    comment_view = new Blog.Views.Comment(model: @model)
+    @$("#comments_section").prepend(comment_view.$el)
+    window.location = window.location.origin + window.location.pathname + "#comments"
+    comment_view.render()
+    @showNotice()
 
   handleErrors: (errors)->
     true
+
+  showNotice: ->
+    flash = $("body #flash")
+    flash.find("#notice span.text").text("GOWNO")
+    flash.show()

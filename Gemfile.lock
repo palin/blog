@@ -93,7 +93,6 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       request_store (~> 1.0.3)
-    ejs (1.0.0)
     erubis (2.7.0)
     eventmachine (1.0.0)
     excon (0.20.0)
@@ -199,10 +198,6 @@ GEM
       activesupport (= 3.2.12)
       bundler (~> 1.0)
       railties (= 3.2.12)
-    rails-backbone (0.7.2)
-      coffee-script (~> 2.2.0)
-      ejs (~> 1.0.0)
-      railties (>= 3.1.0)
     rails-dev-boost (0.2.1)
       rails (>= 3.0)
     railties (3.2.12)
@@ -232,6 +227,9 @@ GEM
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
+    ruby-haml-js (0.0.5)
+      execjs
+      sprockets (>= 2.0.0)
     ruby-hmac (0.4.0)
     ruby2ruby (2.0.3)
       ruby_parser (~> 3.1)
@@ -334,9 +332,9 @@ DEPENDENCIES
   pry-debugger
   psych
   rails (= 3.2.12)
-  rails-backbone
   rails-dev-boost
   rspec
+  ruby-haml-js
   shoulda
   simple_form
   spork

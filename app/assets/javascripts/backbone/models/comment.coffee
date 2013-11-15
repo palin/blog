@@ -16,6 +16,7 @@ class Blog.Models.Comment extends Backbone.Model
     error(errors)
 
   parseSuccess: (response, success)->
+    @set(response)
     success(response)
 
   errorsDecorator: (errors)->

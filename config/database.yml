@@ -1,5 +1,6 @@
 development:
   adapter: mysql2
+  host: 127.0.0.1
   database: blog_dev
   username: root
   pool: 5
@@ -7,14 +8,14 @@ development:
 
 staging:
   adapter: mysql2
-  database: blog_dev
+  database: blog_staging
   username: root
   pool: 5
   timeout: 5000
 
 smoke:
   adapter: mysql2
-  database: blog_dev
+  database: blog_smoke
   username: root
   pool: 5
   timeout: 5000

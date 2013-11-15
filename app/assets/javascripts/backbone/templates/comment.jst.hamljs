@@ -1,0 +1,13 @@
+.comment
+  .avatar
+    %img{src: data.avatar, alt: "user without avatar", width: 60, height: 60}
+  .middle
+    %p.meta
+      %span.author= data.author
+      &#8226;
+      %time{ datetime: data.created_at }
+        = data.neat_created_at
+      &#8226;
+    %p.content= data.content
+  .number
+    %span 0

@@ -16,7 +16,7 @@
         - elsif flash[:notice]
           .notice
             %span.fui-check
-            = flash[:notice]
+            %span.text= flash[:notice]
     #container{class: "#{action_name}"}
       - unless Rails.env.production?
         #env_box= Rails.env

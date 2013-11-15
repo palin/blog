@@ -7,5 +7,7 @@
         = post.created_at.strftime("%A, %e %B %Y")
       &#8226;
       = link_to "#{post.comments.count} Comments", "#comments", class: "comments"
+      &#8226;
+      = link_to "Edit", edit_admin_post_path(post)
   %section
     = raw post.content

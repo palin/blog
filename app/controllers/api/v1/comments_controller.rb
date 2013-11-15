@@ -1,6 +1,7 @@
 class Api::V1::CommentsController < Api::V1::BaseController
   respond_to :json
-  before_filter :setup_negative_captcha, :only => [:create, :update]
+
+  before_filter :setup_negative_captcha, only: [:create, :update]
   before_filter :find_post
 
   def create
@@ -9,7 +10,7 @@ class Api::V1::CommentsController < Api::V1::BaseController
     if @captcha.valid? && @comment.save
       respond_with @comment
     else
-      respond_with @comment
+      unprocessable_entity
     end
   end
 

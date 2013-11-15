@@ -1,0 +1,22 @@
+%h2 Comments
+
+%table.table.table-hover.table-striped.table-bordered
+  %thead
+    %tr
+      %th ID
+      %th{style: "width: 700px;"} Content
+      %th Author
+      %th Created_at
+      %th Post
+  %tbody
+    - comments.each do |c|
+      %tr
+        %td= c.id
+        %td= c.content
+        %td= c.author
+        %td= c.created_at
+        %td= link_to "Post-#{c.post_id}", admin_post_path(c.post.slug)
+        %td
+          %ul.button-group
+            %li= link_to "Edit", edit_admin_comment_path(c), class: "button pill"
+            %li= link_to "Delete", admin_comment_path(c), method: :delete, class: "button danger pill", confirm: "Are you sure?"

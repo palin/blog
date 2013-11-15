@@ -1,0 +1,18 @@
+%h2 Tags
+
+%table.table.table-hover.table-striped.table-bordered
+  %thead
+    %tr
+      %th ID
+      %th Name
+      %th Created_at
+  %tbody
+    - tags.each do |t|
+      %tr
+        %td= t.id
+        %td= t.name
+        %td= t.created_at
+        %td
+          %ul.button-group
+            %li= link_to "Edit", edit_admin_tag_path(t), class: "button pill"
+            %li= link_to "Delete", admin_tag_path(t), method: :delete, class: "button danger pill", confirm: "Are you sure?"

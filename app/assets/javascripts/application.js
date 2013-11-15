@@ -14,8 +14,6 @@
 //= require jquery_ujs
 //= require underscore
 //= require backbone
-//= require backbone.validation.min.js
-//= require backbone_rails_sync
-//= require backbone_datalink
-//= require backbone/blog
 //= require_tree .
+//= require backbone/blog
+

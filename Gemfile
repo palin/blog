@@ -22,7 +22,7 @@ gem 'kaminari'
 gem 'less-rails-bootstrap'
 gem 'mini_magick'
 gem 'negative_captcha'
-gem 'rails-backbone'
+gem 'ruby-haml-js'
 gem 'simple_form'
 gem 'stringex', '~> 1.5.1'
 gem 'thin'
@@ -35,6 +35,7 @@ group :assets do
   gem 'haml_coffee_assets'
   gem 'execjs'
 end
+
 
 gem 'jquery-rails'
 
