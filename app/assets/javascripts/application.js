@@ -16,4 +16,4 @@
 //= require backbone
 //= require_tree .
 //= require backbone/blog
-
+//= require trackers/ganalytics
