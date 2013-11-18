@@ -1,0 +1,17 @@
+deployment:
+  staging:
+    branch: master
+    commands:
+      - git push git@heroku.com:palinium-staging.git $CIRCLE_SHA1:master:
+          timeout: 300
+      - git push git@github.com:palin/blog.git $CIRCLE_SHA1:staging
+      - heroku restart --app palinium-staging
+      - git push git@github.com:palin/blog.git --tags
+  smoke:
+    branch: smoke
+    commands:
+      - heroku maintenance:on --app palinium-smoke
+      - git push git@heroku.com:palinium-smoke.git $CIRCLE_SHA1:master:
+          timeout: 300
+      - heroku restart --app palinium-smoke
+      - git push git@github.com:palin/blog.git --tags
