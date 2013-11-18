@@ -1,0 +1,11 @@
+development:
+  - "localhost:3000"
+
+staging:
+  - staging.palinium.com
+
+smoke:
+  - smoke.palinium.com
+
+production:
+  - www.palinium.com

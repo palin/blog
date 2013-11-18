@@ -140,6 +140,7 @@ GEM
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    konf (0.0.2)
     launchy (2.2.0)
       addressable (~> 2.3)
     less (2.3.1)
@@ -321,6 +322,7 @@ DEPENDENCIES
   json
   json_pure
   kaminari
+  konf
   launchy
   less-rails-bootstrap
   mail_safe

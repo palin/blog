@@ -1,0 +1,11 @@
+development:
+  ga:
+
+staging:
+  ga: UA-45815946-2
+
+smoke:
+  ga:
+
+production:
+  ga: UA-45815946-1
