@@ -22,7 +22,7 @@ module ApplicationHelper
     else
       begin
         Blog::SeoData[controller_name][action_name]['meta_title']
-      rescue ActionView::Template::Error
+      rescue => e
         ""
       end
     end
@@ -34,7 +34,7 @@ module ApplicationHelper
     else
       begin
         Blog::SeoData[controller_name][action_name]['meta_description']
-      rescue ActionView::Template::Error
+      rescue => e
         ""
       end
     end
