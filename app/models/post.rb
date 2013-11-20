@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-  attr_accessible :content, :title, :category_id, :slug, :hidden, :tag_list
+  attr_accessible :content, :title, :category_id, :slug, :hidden, :tag_list, :meta_description, :meta_keywords, :meta_title
   acts_as_url :title, sync_url: true, url_attribute: :slug
   acts_as_taggable_on :tags
 

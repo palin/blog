@@ -1,0 +1,8 @@
+posts:
+  index:
+    meta_description: "Ruby on Rails advices, solutions for problems with frontend and backend web development in one place on blog.palinium.com"
+    meta_title: "palinium.com"
+static_pages:
+  about:
+    meta_description: "About author of palinium.com"
+    meta_title: "author of | palinium.com"

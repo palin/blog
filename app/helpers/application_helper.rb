@@ -15,4 +15,20 @@ module ApplicationHelper
       controller_name.humanize
     end
   end
+
+  def meta_title
+    if content_for(:title).present?
+      "#{content_for(:title)} on palinium.com"
+    else
+      Blog::SeoData[controller_name][action_name]['meta_title']
+    end
+  end
+
+  def meta_description
+    if content_for(:meta_description).present?
+      "#{content_for(:meta_description)} on palinium.com"
+    else
+      Blog::SeoData[controller_name][action_name]['meta_description']
+    end
+  end
 end

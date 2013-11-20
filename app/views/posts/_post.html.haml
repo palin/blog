@@ -1,3 +1,11 @@
+- if action_name == "show"
+  = content_for :title do
+    - post.meta_title
+  = content_for :meta_description do
+    - post.meta_description
+  = content_for :meta_keywords do
+    - post.meta_keywords
+
 .post
   %header
     %h3= link_to post.title, post_path(post)
