@@ -20,7 +20,11 @@ module ApplicationHelper
     if content_for(:title).present?
       "#{content_for(:title)} on palinium.com"
     else
-      Blog::SeoData[controller_name][action_name]['meta_title']
+      begin
+        Blog::SeoData[controller_name][action_name]['meta_title']
+      rescue ActionView::Template::Error
+        ""
+      end
     end
   end
 
@@ -28,7 +32,11 @@ module ApplicationHelper
     if content_for(:meta_description).present?
       "#{content_for(:meta_description)} on palinium.com"
     else
-      Blog::SeoData[controller_name][action_name]['meta_description']
+      begin
+        Blog::SeoData[controller_name][action_name]['meta_description']
+      rescue ActionView::Template::Error
+        ""
+      end
     end
   end
 end
