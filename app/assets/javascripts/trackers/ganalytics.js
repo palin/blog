@@ -5,6 +5,6 @@ if(gon.trackers !== undefined && gon.trackers !== null && gon.domains[0] !== und
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', gon.trackers.ga, gon.domains[0]);
+    ga('create', gon.trackers.ga, window.location.host);
     ga('send', 'pageview');
   }

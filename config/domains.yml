@@ -8,4 +8,12 @@ smoke:
   - smoke.palinium.com
 
 production:
+  - blog.palinium.com
+  - blog.palinium.pl
+  - blog.palinium.com.pl
   - www.palinium.com
+  - www.palinium.pl
+  - www.palinium.com.pl
+  - palinium.com
+  - palinium.pl
+  - palinium.com.pl
