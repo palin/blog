@@ -15,3 +15,4 @@ deployment:
           timeout: 300
       - heroku restart --app palinium-smoke
       - git push git@github.com:palin/blog.git --tags
+      - heroku maintenance:off --app palinium-smoke
