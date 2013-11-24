@@ -12,6 +12,7 @@ class Post < ActiveRecord::Base
 
   scope :visible, -> { where(hidden: false) }
   scope :published, -> { where("published IS NOT NULL") }
+  scope :filter, ->(filter) { joins(:tags).where('tags.name = ?', filter) }
 
   def to_param
     slug

@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   require 'pagination'
 
-  expose(:posts) { Post.visible.published }
+  expose(:posts) { filter_posts }
   expose(:pgn) { Pagination.new(posts, 3, params) }
   expose(:posts_paginated) { posts.page(params[:page] || 1).per(params[:per_page] || 10) }
   expose(:decorated_posts) { PostDecorator.decorate_collection(posts_paginated) }
@@ -24,5 +24,13 @@ class PostsController < ApplicationController
       fields: [:author, :content],
       params: params
     )
+  end
+
+  def filter_posts
+    if params[:filter].present?
+      Post.visible.published.filter(params[:filter])
+    else
+      Post.visible.published
+    end
   end
 end
