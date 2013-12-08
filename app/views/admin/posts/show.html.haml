@@ -8,6 +8,10 @@
       &#8226;
       = link_to "#{post.comments.count} Comments", "#comments", class: "comments"
       &#8226;
+      - post.tag_list.each do |t|
+        = link_to t, "#{posts_path}?filter=#{t}"
+      = image_tag "tags.png", alt: "Tags"
+      &#8226;
       = link_to "Edit", edit_admin_post_path(post)
   %section
     = raw post.content

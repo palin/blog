@@ -2,7 +2,83 @@ body.admin.posts {
   &.new,
   &.create,
   &.edit,
+  &.show,
   &.update {
+    p.meta {
+      text-indent: 0px;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 300;
+      margin-bottom: 10px;
+      text-shadow: none;
+      img {
+        margin-bottom: 6px;
+        margin-right: 4px;
+      }
+    }
+    header {
+      height: auto;
+      padding: 0;
+      margin: 0;
+      background: #fff;
+      h3 {
+        font-size: 29px;
+        font-weight: 400;
+        a, a:hover, a:visited {
+          color: #2455c3;
+          text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.5);
+        }
+      }
+    }
+    #code_block {
+      background: #ddd;
+      border: 1px solid #ddd;
+      overflow: auto;
+      margin-bottom: 15px;
+
+      pre {
+        padding: 10px;
+        margin: 0;
+        margin-top: -20px;
+        background: #eee;
+        border-bottom: 5px dashed #ddd;
+        code {
+          background: #eee;
+          font: 12px Monaco, "Source Code Pro", Courier, Monospace;
+          color: #0E304A;
+          span.irb_input {
+            color: #2980B9;
+          }
+          span.irb_output {
+            color: #d14;
+          }
+        }
+      }
+    }
+    section {
+      padding-top: 0px;
+      p {
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 26px;
+        text-align: justify;
+        margin-bottom: 26px;
+      }
+      p:first-child {
+          text-indent: 0px;
+      }
+      p:first-child:first-letter {
+        font-weight: 700;
+        font-size: 40px;
+      }
+      h4 {
+        font-size: 25px;
+        font-weight: 400;
+        text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.5);
+      }
+    }
     form {
       width: 600px;
       div {
@@ -14,6 +90,11 @@ body.admin.posts {
       textarea {
         width: 900px;
       }
+    }
+  }
+  &.show {
+    .post {
+      width: 850px;
     }
   }
 }
