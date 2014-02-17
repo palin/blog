@@ -1,10 +1,2 @@
 %h2 Edit post
-= simple_form_for [:admin, post] do |p|
-  = p.input :title, label: false, required: true, placeholder: "Title"
-  = p.input :meta_description, label: false, placeholder: "Meta description"
-  = p.input :meta_keywords, label: false, placeholder: "Meta keywords"
-  = p.input :meta_title, label: false, placeholder: "Meta title"
-  = p.input :tag_list, label: false, required: true, placeholder: "Tags"
-  = p.input :content, label: false, required: true, placeholder: "Content"
-  = p.input :hidden
-  = p.button :submit
+= render partial: 'post_form'

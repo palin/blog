@@ -1,0 +1,17 @@
+= simple_form_for [:admin, post] do |p|
+  .form-inputs
+    = p.input :title, label: false, required: true, placeholder: "Title"
+    = p.input :tag_list, label: false, required: true, placeholder: "Tags"
+    = p.input :meta_description, label: false, placeholder: "Meta description"
+    = p.input :meta_title, label: false, placeholder: "Meta title"
+    = p.input :hidden, as: :boolean
+  .form-helpers
+    %input{type: 'text', value: "<div id='code_block'><pre><code></code></pre></div>"}
+    %input{type: 'text', value: "<span class='irb_input'>irb(main)> </span>"}
+    %input{type: 'text', value: "<span class='irb_output'>=></span>"}
+    %input{type: 'text', value: "<h4></h4>"}
+  .form-content
+    = p.input :content, label: false, required: true, placeholder: "Content"
+    = p.button :submit
+
+
