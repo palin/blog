@@ -5,7 +5,7 @@ class Admin::CommentsController < Admin::AdminController
 
   def update
     if comment.save
-      redirect_to admin_comments_path, :notice => "Successfully updated comment!"
+      redirect_to admin_comments_path, notice: "Successfully updated comment!"
     else
       render :edit
     end
@@ -18,6 +18,6 @@ class Admin::CommentsController < Admin::AdminController
       message = "Couldn't delete comment!"
     end
 
-    redirect_to admin_comments_path, :notice => message
+    redirect_to admin_comments_path, notice: message
   end
 end

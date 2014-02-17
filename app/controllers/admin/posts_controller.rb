@@ -5,7 +5,7 @@ class Admin::PostsController < Admin::AdminController
 
   def update
     if post.save
-      redirect_to admin_posts_path, :notice => "Successfully updated post!"
+      redirect_to admin_posts_path, notice: "Successfully updated post!"
     else
       render :edit
     end
@@ -13,7 +13,7 @@ class Admin::PostsController < Admin::AdminController
 
   def create
     if post.save
-      redirect_to admin_posts_path, :notice => "Successfully saved post!"
+      redirect_to admin_posts_path, notice: "Successfully saved post!"
     else
       render :new
     end
@@ -26,21 +26,21 @@ class Admin::PostsController < Admin::AdminController
       message = "Couldn't delete post!"
     end
 
-    redirect_to admin_posts_path, :notice => message
+    redirect_to admin_posts_path, notice: message
   end
 
   def publish
     post.publish!
-    redirect_to admin_posts_path, :notice => "Successfully updated post!"
+    redirect_to admin_posts_path, notice: "Successfully updated post!"
   end
 
   def hide
     post.hide!
-    redirect_to admin_posts_path, :notice => "Successfully updated post!"
+    redirect_to admin_posts_path, notice: "Successfully updated post!"
   end
 
   def visible
     post.visible!
-    redirect_to admin_posts_path, :notice => "Successfully updated post!"
+    redirect_to admin_posts_path, notice: "Successfully updated post!"
   end
 end
