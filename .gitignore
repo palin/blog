@@ -13,5 +13,5 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-app/.DS_Store
+.DS_Store
 .sass-cache/*
