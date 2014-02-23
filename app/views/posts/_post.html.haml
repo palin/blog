@@ -9,15 +9,16 @@
 .post
   %header
     %h3= link_to post.title, post_path(post)
-    %p.meta
+    .meta
       = image_tag "date.png", alt: "Date"
       %time{ datetime: post.created_at }
         = post.created_at.strftime("%A, %e %B %Y")
       &#8226;
       = link_to "#{post.comments.count} Comments", "#{post_path(post)}#comments", class: "comments"
-      &#8226;
-      - post.tag_list.each do |t|
-        = link_to t, "#{posts_path}?filter=#{t}"
+      .post-tags
+        &#8226;
+        - post.tag_list.each do |t|
+          = link_to t, "#{posts_path}?filter=#{t}"
       = image_tag "tags.png", alt: "Tags"
       - if current_user.present?
         &#8226;
