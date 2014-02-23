@@ -37,9 +37,6 @@ group :assets do
   gem 'execjs'
 end
 
-
-gem 'jquery-rails'
-
 group :development do
   gem 'psych'
   gem 'mysql2'
