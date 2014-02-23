@@ -11,8 +11,6 @@
         %ul.nav
           %li{ class: controller_name == "posts" ? 'active' : '' }
             = link_to "Posts", admin_posts_url
-          %li{ class: controller_name == "categories" ? 'active' : '' }
-            = link_to "Categories", admin_categories_url
           %li{ class: controller_name == "tags" ? 'active' : '' }
             = link_to "Tags", admin_tags_url
           %li{ class: controller_name == "comments" ? 'active' : '' }

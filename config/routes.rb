@@ -11,7 +11,6 @@ Blog::Application.routes.draw do
       end
     end
     resources :tags
-    resources :categories
     resources :comments
   end
 
@@ -21,7 +20,6 @@ Blog::Application.routes.draw do
   resources :user_sessions, only: [:create]
   resources :posts
   resources :tags
-  resources :categories
   resources :comments
 
   namespace :api do
