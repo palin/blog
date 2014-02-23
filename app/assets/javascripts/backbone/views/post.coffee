@@ -10,6 +10,7 @@ class Blog.Views.Post extends Backbone.View
     '.content_input': 'content'
 
   initialize: ->
+    hljs.initHighlighting()
     @model = new Blog.Models.Comment(post_id: gon.post_id)
     $("#flash").fadeOut(3000)
 
