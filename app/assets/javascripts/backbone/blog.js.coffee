@@ -37,7 +37,7 @@ window.Blog =
 $ ->
   Blog.includeFB(document, "script", "facebook-jssdk")
   Blog.init()
-  FB.init
+  FB?.init
     appId: "322533301218677"
     status: true
     xfbml: true
