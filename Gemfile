@@ -28,6 +28,7 @@ gem 'simple_form'
 gem 'stringex', '~> 1.5.1'
 gem 'thin'
 gem 'yui-compressor', '~> 0.9.6'
+gem 'heroku-deflater'
 
 group :assets do
   gem 'coffee-rails', '~> 3.2.1'
