@@ -1,6 +1,8 @@
 @media screen and (max-width: 640px) {
   html {
     body.blog {
+      padding: 0 10px;
+
       #container {
         h3 {
           line-height: 25px;
@@ -16,7 +18,7 @@
         section.layout {
           margin-top: -8px;
           .left_column {
-            padding: 10px 15px 0px;
+            padding: 10px 15px;
           }
         }
         p {
@@ -30,16 +32,18 @@
         top: 5px;
         left: 5px;
         height: 18px;
+        z-index: 9999;
       }
 
       #palin {
         display: none;
       }
       #posts {
+        overflow: hidden;
         .post {
           header {
             h3 a {
-              font-size: 24px;
+              font-size: 22px;
             }
             img {
               display: none;
@@ -55,12 +59,23 @@
 
           article {
             h4 {
-              font-size: 22px;
+              font-size: 17px;
               margin: 15px 0;
             }
 
+            p {
+              color: #000;
+            }
+
             #code_block {
-              display: none;
+              pre code {
+                font: 10px/13px Monaco,"Source Code Pro",Courier,Monospace;
+              }
+              // display: none;
+            }
+
+            .omission {
+              width: 50%;
             }
           }
         }
