@@ -25,6 +25,8 @@
     #container{class: "#{action_name}"}
       - unless Rails.env.production?
         #env_box= Rails.env
+      #go_to_top
+        %span ^
       %header
         = render partial: "layouts/header"
       %section.layout

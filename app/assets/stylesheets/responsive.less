@@ -35,6 +35,24 @@
         z-index: 9999;
       }
 
+      #go_to_top {
+        position: fixed;
+        right: 11px;
+        bottom: 1%;
+        padding: 15px;
+        width: 20px;
+        height: 20px;
+        z-index: 9999;
+        background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.13);
+        border-radius: 50%;
+
+        span {
+          padding: 2px;
+          font-size: 30px;
+          color: #aaa;
+        }
+      }
+
       #palin {
         display: none;
       }
@@ -83,6 +101,18 @@
       #comments_section {
         .avatar {
           display: none;
+        }
+      }
+    }
+  }
+
+  .comments {
+    section#comments_section {
+      .comment {
+        .middle {
+          .author {
+            display: block;
+          }
         }
       }
     }
