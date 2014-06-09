@@ -1,6 +1,37 @@
 @media screen and (max-width: 640px) {
   html {
-    body {
+    body.blog {
+      #container {
+        h3 {
+          line-height: 25px;
+        }
+        header {
+          padding: 0;
+
+          h2 {
+            font-size: 25px !important;
+            margin-right: 0px !important;
+          }
+        }
+        section.layout {
+          margin-top: -8px;
+          .left_column {
+            padding: 10px 15px 0px;
+          }
+        }
+        p {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+      #env_box {
+        padding: 0;
+        width: 90px;
+        top: 5px;
+        left: 5px;
+        height: 18px;
+      }
+
       #palin {
         display: none;
       }
@@ -18,10 +49,18 @@
             }
           }
 
+          .meta {
+            margin: 20px 0;
+          }
+
           article {
             h4 {
               font-size: 22px;
               margin: 15px 0;
+            }
+
+            #code_block {
+              display: none;
             }
           }
         }
