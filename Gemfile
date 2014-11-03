@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'
+ruby '2.0.0'
 
 gem 'rails', '3.2.12'
 gem 'pg'
@@ -26,7 +26,6 @@ gem 'negative_captcha'
 gem 'ruby-haml-js'
 gem 'simple_form'
 gem 'stringex', '~> 1.5.1'
-gem 'thin'
 gem 'yui-compressor', '~> 0.9.6'
 gem 'heroku-deflater'
 
@@ -58,7 +57,5 @@ group :test do
 end
 
 group :development, :test do
-  gem 'pry'
-  gem 'pry-debugger'
   gem 'mail_safe'
 end
