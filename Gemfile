@@ -38,7 +38,6 @@ group :assets do
 end
 
 group :development do
-  gem 'thin'
   gem 'psych'
   gem 'mysql2'
   gem "rails-dev-boost"
