@@ -26,7 +26,6 @@ gem 'negative_captcha'
 gem 'ruby-haml-js'
 gem 'simple_form'
 gem 'stringex', '~> 1.5.1'
-gem 'thin'
 gem 'yui-compressor', '~> 0.9.6'
 gem 'heroku-deflater'
 
@@ -39,6 +38,7 @@ group :assets do
 end
 
 group :development do
+  gem 'thin'
   gem 'psych'
   gem 'mysql2'
   gem "rails-dev-boost"
