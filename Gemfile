@@ -58,4 +58,6 @@ end
 
 group :development, :test do
   gem 'mail_safe'
+  gem 'pry'
+  gem 'pry-debugger'
 end
