@@ -18,7 +18,7 @@ Blog::Application.routes.draw do
   match 'login', to: 'user_sessions#new', as: "login"
   match 'about', to: 'static_pages#about'
   resources :user_sessions, only: [:create]
-  resources :posts, only: [:show]
+  resources :posts, only: [:show, :index]
   resources :comments, only: [:destroy]
 
   namespace :api do
