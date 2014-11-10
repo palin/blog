@@ -8,6 +8,12 @@ FactoryGirl.define do
     published nil
   end
 
+  factory :comment do
+    post
+    content "This is a comment"
+    author "Superman"
+  end
+
   factory :category do
     sequence(:name) { |n| "Category #{n}"}
   end
