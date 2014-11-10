@@ -19,7 +19,7 @@ Blog::Application.routes.draw do
   match 'about', to: 'static_pages#about'
   resources :user_sessions, only: [:create]
   resources :posts, only: [:show, :index]
-  resources :comments, only: [:destroy]
+  resources :comments, only: [:destroy, :index]
 
   namespace :api do
     namespace :v1 do
