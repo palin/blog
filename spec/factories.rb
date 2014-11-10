@@ -11,4 +11,11 @@ FactoryGirl.define do
   factory :category do
     sequence(:name) { |n| "Category #{n}"}
   end
+
+  factory :user do
+    sequence(:login) { |n| "User_#{n}" }
+    sequence(:email) { |n| "user_email_#{n}@dev.com" }
+    password "password"
+    password_confirmation "password"
+  end
 end
