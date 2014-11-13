@@ -1,6 +1,6 @@
 posts:
   index:
-    meta_description: "Ruby on Rails advice, solutions to problems with frontend and backend web development"
+    meta_description: "Ruby on Rails Developer Blog, problems, solutions, frontend and backend web development"
     meta_title: "palinium.com"
 static_pages:
   about:
