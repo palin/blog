@@ -28,4 +28,8 @@ class Post < ActiveRecord::Base
   def visible!
     update_attribute(:hidden, false)
   end
+
+  def pretty_date
+    created_at.strftime("%A, %e %B %Y")
+  end
 end

@@ -12,7 +12,7 @@
     .meta
       = image_tag "date.png", alt: "Date"
       %time{ datetime: post.created_at }
-        = post.created_at.strftime("%A, %e %B %Y")
+        = post.pretty_date
       &#8226;
       = link_to "#{post.comments.count} Comments", "#{post_path(post)}#comments", class: "comments"
       .post-tags
