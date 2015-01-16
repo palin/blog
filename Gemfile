@@ -54,6 +54,7 @@ group :test do
   gem 'spork'
   gem 'steak'
   gem 'webmock'
+  gem 'cucumber-rails', require: false
 end
 
 group :development, :test do
