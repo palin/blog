@@ -24,7 +24,7 @@ And(/^I should see the date$/) do
   page.should have_content(@post.pretty_date)
 end
 
-And(/^I should see the "(.*?)" tags$/) do |tags|
+And(/^I should see the "(.*?)" tag$/) do |tags|
   page.should have_content(tags)
 end
 

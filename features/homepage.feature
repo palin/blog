@@ -6,7 +6,8 @@ Feature: Homepage
     When I visit the homepage
     Then I should see the "My first" title
     And I should see the date
-    And I should see the "bdd world" tags
+    And I should see the "bdd" tag
+    And I should see the "world" tag
     And I should see the read more button
 
   Scenario: Viewing post's page
