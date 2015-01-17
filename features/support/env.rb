@@ -5,6 +5,7 @@
 # files.
 
 require 'cucumber/rails'
+require 'selenium-webdriver'
 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
@@ -27,6 +28,9 @@ require 'cucumber/rails'
 # recommended as it will mask a lot of errors for you!
 #
 ActionController::Base.allow_rescue = false
+NegativeCaptcha.test_mode = true
+WebMock.disable_net_connect!(allow: "http://127.0.0.1:59876")
+Capybara.javascript_driver = :webkit
 
 # Remove/comment out the lines below if your app doesn't have a database.
 # For some databases (like MongoDB and CouchDB) you may need to use :truncation instead.
