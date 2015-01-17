@@ -9,10 +9,3 @@ Feature: Homepage
     And I should see the "bdd" tag
     And I should see the "world" tag
     And I should see the read more button
-
-  Scenario: Viewing post's page
-    Given there's a post titled "Super post" with "My favorite pizza" content
-    And the post has been published
-    When I visit the post page
-    Then I should see the "Super post" title
-    And I should see the "My favorite pizza" content
