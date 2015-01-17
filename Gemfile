@@ -55,6 +55,8 @@ group :test do
   gem 'steak'
   gem 'webmock'
   gem 'cucumber-rails', require: false
+  gem 'selenium-webdriver'
+  gem 'capybara-webkit'
 end
 
 group :development, :test do

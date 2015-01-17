@@ -62,6 +62,9 @@ GEM
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 1.0.0)
+    capybara-webkit (1.2.0)
+      capybara (>= 2.0.2, < 2.4.0)
+      json
     carrierwave (0.8.0)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -313,6 +316,7 @@ DEPENDENCIES
   authlogic
   brakeman
   capybara
+  capybara-webkit
   carrierwave
   coffee-rails (~> 3.2.1)
   cucumber-rails
@@ -346,6 +350,7 @@ DEPENDENCIES
   rails-dev-boost
   rspec
   ruby-haml-js
+  selenium-webdriver
   shoulda
   simple_form
   spork
