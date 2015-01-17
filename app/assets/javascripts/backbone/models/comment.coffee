@@ -25,10 +25,17 @@ class Blog.Models.Comment extends Backbone.Model
 
   neatCreatedAt: ->
     date = new Date(@get('created_at'))
-    time = date.getHours() + ":" + date.getMinutes()
-    month = date.getMonth() + 1
-    month = if month < 10 then "0#{month}" else month
-    fullDate = date.getDate() + "/" + month + "/" + date.getFullYear()
+    hour = @addZero(date.getHours())
+    minutes = @addZero(date.getMinutes())
+    time = hour + ":" + minutes
+
+    day = @addZero(date.getDate())
+    month = @addZero(date.getMonth() + 1)
+    fullDate = day + "/" + month + "/" + date.getFullYear()
+
     time + ", " + fullDate
+
+  addZero: (number)->
+    if number < 10 then "0#{number}" else number
 
 _.extend Blog.Models.Comment.prototype, Backbone.Validation.mixin
