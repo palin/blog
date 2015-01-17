@@ -23,6 +23,12 @@ class Blog.Models.Comment extends Backbone.Model
     _.each _.keys(errors), (key)->
       messages = errors[key]
 
-
+  neatCreatedAt: ->
+    date = new Date(@get('created_at'))
+    time = date.getHours() + ":" + date.getMinutes()
+    month = date.getMonth() + 1
+    month = if month < 10 then "0#{month}" else month
+    fullDate = date.getDate() + "/" + month + "/" + date.getFullYear()
+    time + ", " + fullDate
 
 _.extend Blog.Models.Comment.prototype, Backbone.Validation.mixin

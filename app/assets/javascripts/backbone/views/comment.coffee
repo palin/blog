@@ -4,3 +4,4 @@ class Blog.Views.Comment extends Marionette.ItemView
 
   serializeData: ->
     data: @model.attributes
+    date: @model.neatCreatedAt()
